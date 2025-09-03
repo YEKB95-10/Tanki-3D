@@ -1,0 +1,183 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      color: white;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .game-container {
+      position: relative;
+      width: 1000px;
+      height: 700px;
+      background: #000;
+      border: 3px solid #00d1b2;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(0, 209, 178, 0.4);
+    }
+
+    .game-canvas {
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+
+    .title-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    .title-screen h1 {
+      color: #00d1b2;
+      font-size: 5em;
+      margin-bottom: 30px;
+      text-shadow: 0 0 30px #00d1b2, 0 0 60px #00d1b2;
+      animation: glow 2s ease-in-out infinite alternate;
+      font-weight: bold;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 30px #00d1b2, 0 0 60px #00d1b2; }
+      to { text-shadow: 0 0 40px #00d1b2, 0 0 80px #00d1b2, 0 0 100px #00d1b2; }
+    }
+
+    .title-screen button {
+      padding: 25px 50px;
+      font-size: 1.8em;
+      background: linear-gradient(45deg, #00d1b2, #009e8e);
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 209, 178, 0.4);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .title-screen button:hover {
+      background: linear-gradient(45deg, #009e8e, #00d1b2);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 209, 178, 0.6);
+    }
+
+    .game-over {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1500;
+      background: rgba(0,0,0,0.95);
+      padding: 40px;
+      border-radius: 20px;
+      border: 3px solid #f00;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+    }
+
+    .game-over h2 {
+      color: #f00;
+      margin-bottom: 25px;
+      font-size: 2.5em;
+      text-shadow: 0 0 15px #f00;
+    }
+
+    .game-over button {
+      display: block;
+      width: 250px;
+      margin: 15px auto;
+      padding: 15px;
+      background: linear-gradient(45deg, #f00, #a00);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .game-over button:hover {
+      background: linear-gradient(45deg, #a00, #f00);
+      transform: translateY(-2px);
+    }
+
+    .main-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .ui-panel {
+      width: 250px;
+      height: 700px;
+      background: #1a1a1a;
+      border: 3px solid #00d1b2;
+      border-radius: 15px;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      font-size: 1.5em;
+      box-shadow: 0 0 30px rgba(0, 209, 178, 0.2);
+    }
+
+    .ui-panel h2 {
+      color: #00d1b2;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #00d1b2;
+    }
+
+    .stat-item {
+      margin-bottom: 25px;
+    }
+
+    .ui-controls {
+      margin-top: auto; /* Прижимает блок к низу */
+      padding-top: 20px;
+      border-top: 2px solid #00d1b2;
+    }
+
+    .ui-controls button {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 10px;
+      font-size: 1em;
+      background: linear-gradient(45deg, #00d1b2, #009e8e);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .ui-controls button:hover {
+      background: linear-gradient(45deg, #009e8e, #00d1b2);
+      transform: translateY(-2px);
+    }
+
+    .hidden {
+      display: none;
+    }

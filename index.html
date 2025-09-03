@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>3D Танчики | Battle City</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="game-container">
+      <canvas id="gameCanvas" class="game-canvas"></canvas>
+      
+      <div class="title-screen" id="titleScreen">
+        <h1>3D ТАНЧИКИ</h1>
+        <button id="startButton">ИГРАТЬ</button>
+      </div>
+      
+      <div class="game-over" id="gameOver" style="display: none;">
+        <h2>Игра окончена!</h2>
+        <div>Очки: <span id="finalScore">0</span></div>
+        <button id="restartButton">Играть снова</button>
+        <button id="menuButton">Главное меню</button>
+      </div>
+    </div>
+    <div class="ui-panel hidden" id="uiPanel">
+      <h2>СТАТИСТИКА</h2>
+      <div class="stat-item">Уровень: <span id="uiLevel">1</span></div>
+      <div class="stat-item">Жизни: <span id="uiLives">3</span></div>
+      <div class="stat-item">Очки: <span id="uiScore">0</span></div>
+      <div class="stat-item">Время: <span id="uiTimer">3:00</span></div>
+      <div class="ui-controls">
+        <button id="pauseButton">Пауза</button>
+        <button id="restartLevelButton">
+          Перезапуск уровня
+        </button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

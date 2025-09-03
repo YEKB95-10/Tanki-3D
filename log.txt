@@ -1,0 +1,1 @@
+[2025-09-02 21:31:12] [FREEZE] Game loop has frozen.
